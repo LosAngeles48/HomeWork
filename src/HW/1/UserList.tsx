@@ -21,12 +21,12 @@ export const UserList = (props: UserListPropsType) => {
             <h2>User List:</h2>
 
             <ul>
-                {props.users.map((UserListPropsType) => ( // ВСЕ ТОВАРЫ В СТРАНУ ПРИЕЗЖАЮТ В КОНТЕЙНЕРАХ, А В РЕАКТЕ...
-                    <li key={UserListPropsType.id}
-                        id={`hw01-user-${UserListPropsType.id}`}>
-                        <span> {UserListPropsType.name} </span>
-                        <span> (Age: {UserListPropsType.age}) </span>
-                        <span> Address:{UserListPropsType.address.street}, {UserListPropsType.address.city}</span>
+                {props.users.map((user) => ( // ВСЕ ТОВАРЫ В СТРАНУ ПРИЕЗЖАЮТ В КОНТЕЙНЕРАХ, А В РЕАКТЕ...
+                    <li key={user.id}
+                        id={`hw01-user-${user.id}`}>
+                        <span> {user.name} </span>
+                        <span> (Age: {user.age}) </span>
+                        <span> Address:{user.address.street}, {user.address.city}</span>
                     </li>
                 ))}
             </ul>
