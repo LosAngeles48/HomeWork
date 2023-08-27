@@ -25,7 +25,7 @@ export const UserList = (props: UserListPropsType) => {
                     <li key={user.id}
                         id={`hw01-user-${user.id}`}>
                         <span> {user.name} </span>
-                        <span> (Age: {user.age}) </span>
+                        <strong> (Age: {user.age}) </strong>
                         <span> Address:{user.address.street}, {user.address.city}</span>
                     </li>
                 ))}
