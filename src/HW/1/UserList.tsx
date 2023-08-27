@@ -22,11 +22,8 @@ export const UserList = (props: UserListPropsType) => {
 
             <ul>
                 {props.users.map((user) => ( // ВСЕ ТОВАРЫ В СТРАНУ ПРИЕЗЖАЮТ В КОНТЕЙНЕРАХ, А В РЕАКТЕ...
-                    <li key={user.id}
-                        id={`hw01-user-${user.id}`}>
-                        <strong> {user.name} </strong>
-                        <strong> (Age: {user.age}) </strong>
-                        <strong> Address:{user.address.street}, {user.address.city}</strong>
+                    <li key={user.id} id={`hw01-user-${user.id}`}>
+                        <strong> {user.name} </strong>  (Age: {user.age}) <strong> Address:{user.address.street}, {user.address.city}</strong>
                     </li>
                 ))}
             </ul>
