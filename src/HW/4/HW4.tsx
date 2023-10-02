@@ -18,7 +18,7 @@ export const HW4 = () => {
   ]);
 
   const handleSave = () => {
-    setTexts([currentText, ...texts]);
+    setTexts(prevState => [currentText, ...texts]);
     setCurrentText('');
   };
 
@@ -30,9 +30,9 @@ export const HW4 = () => {
         <h1 id={'hw04-default-text'}>Здесь появится новое дело</h1>
       )}
 
-      <Input  />
+      <Input currentText={currentText} setCurrentText={setCurrentText}   />
 
-      <Button />
+      <Button name='Add New Text' callBack={handleSave} />
 
       <h1 style={{ marginTop: '50px' }}>СПИСОК ДЕЛ НА ДЕНЬ:</h1>
 
